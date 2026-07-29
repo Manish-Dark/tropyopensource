@@ -1,3 +1,4 @@
+/// <reference path="./deno.d.ts" />
 import { Soxa as ServiceProvider } from "soxa/src/core/Soxa.ts";
 import { defaults } from "soxa/src/defaults.ts";
 import { assertEquals, assertRejects } from "@std/assert";

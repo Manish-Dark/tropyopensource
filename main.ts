@@ -1,4 +1,5 @@
-import { serve } from "@std/http/server";
+/// <reference path="./deno.d.ts" />
 import requestHandler from "./api/index.ts";
 
-serve(requestHandler, { port: Number(Deno.env.get("PORT")) || 8080 });
+Deno.serve({ port: Number(Deno.env.get("PORT")) || 8080 }, requestHandler);
+

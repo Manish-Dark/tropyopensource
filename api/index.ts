@@ -2,13 +2,19 @@ import { Card } from "../src/card.ts";
 import { CONSTANTS, parseParams } from "../src/utils.ts";
 import { COLORS, Theme } from "../src/theme.ts";
 import { Error400 } from "../src/error_page.ts";
-import "@std/dotenv/load";
+import { load } from "@std/dotenv";
 import { staticRenderRegeneration } from "../src/StaticRenderRegeneration/index.ts";
 import { GithubRepositoryService } from "../src/Repository/GithubRepository.ts";
 import { GithubApiService } from "../src/Services/GithubApiService.ts";
 import { ServiceError } from "../src/Types/index.ts";
 import { ErrorPage } from "../src/pages/Error.ts";
 import { cacheProvider } from "../src/config/cache.ts";
+
+try {
+  await load({ export: true });
+} catch {
+  // Ignore missing .env file in production environments (e.g. Vercel)
+}
 
 const serviceProvider = new GithubApiService();
 const client = new GithubRepositoryService(serviceProvider).repository;

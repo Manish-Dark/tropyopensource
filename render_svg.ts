@@ -1,5 +1,11 @@
 /// <reference path="./deno.d.ts" />
-import "@std/dotenv/load";
+import { load } from "@std/dotenv";
+
+try {
+  await load({ export: true });
+} catch {
+  // Ignore missing .env file
+}
 
 const username = Deno.args[0];
 const outputPath = Deno.args[1] ?? "./assets/trophy.svg";
