@@ -12,6 +12,12 @@ declare namespace Deno {
   };
 }
 
+declare module "@std/dotenv" {
+  export function load(options?: { export?: boolean; envPath?: string; examplePath?: string }): Promise<Record<string, string>>;
+}
+
+declare module "@std/dotenv/load" {}
+
 declare module "@std/http/server" {
   export function serve(handler: any, options?: any): any;
 }
