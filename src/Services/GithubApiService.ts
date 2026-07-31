@@ -20,11 +20,38 @@ import { EServiceKindError, ServiceError } from "../Types/index.ts";
 import { Logger } from "../Helpers/Logger.ts";
 import { requestGithubData } from "./request.ts";
 
-// Need to be here - Exporting from another file makes array of null
-export const TOKENS = [
-  Deno.env.get("GITHUB_TOKEN1"),
-  Deno.env.get("GITHUB_TOKEN2"),
-];
+// Dynamically retrieve available GitHub API tokens from environment variables
+export function getTokens(): string[] {
+  const envTokens = [
+    Deno.env.get("GITHUB_TOKEN1"),
+    Deno.env.get("GITHUB_TOKEN2"),
+    Deno.env.get("GITHUB_TOKEN"),
+    Deno.env.get("GH_TOKEN"),
+    Deno.env.get("PAT"),
+  ].filter((token): token is string => Boolean(token && token.trim().length > 0));
+
+  if (envTokens.length > 0) {
+    return envTokens;
+  }
+
+  // Default to 2 token slots if no env tokens are defined (allows retries & test mocks to function)
+  return [
+    Deno.env.get("GITHUB_TOKEN1") ?? "",
+    Deno.env.get("GITHUB_TOKEN2") ?? "",
+  ];
+}
+
+export const TOKENS = new Proxy([] as string[], {
+  get(_target, prop) {
+    const currentTokens = getTokens();
+    if (prop === "length") return currentTokens.length;
+    if (typeof prop === "string" && !isNaN(Number(prop))) {
+      return currentTokens[Number(prop)];
+    }
+    const val = (currentTokens as any)[prop];
+    return typeof val === "function" ? val.bind(currentTokens) : val;
+  },
+});
 
 export class GithubApiService extends GithubRepository {
   async requestUserAll(
@@ -82,15 +109,16 @@ export class GithubApiService extends GithubRepository {
     variables: { [key: string]: string },
   ) {
     try {
+      const tokens = getTokens();
       const retry = new Retry(
-        TOKENS.length,
+        tokens.length,
         CONSTANTS.DEFAULT_GITHUB_RETRY_DELAY,
       );
       return await retry.fetch<Promise<T>>(async ({ attempt }) => {
         return await requestGithubData(
           query,
           variables,
-          TOKENS[attempt],
+          tokens[attempt],
         );
       });
     } catch (error) {

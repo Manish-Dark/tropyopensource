@@ -52,8 +52,8 @@ class CacheProvider {
       await this.client?.set(key, value, {
         px: CONSTANTS.REDIS_TTL,
       });
-    } catch (e) {
-      Logger.error(`Failed to set cache: ${e.message}`);
+    } catch (e: any) {
+      Logger.error(`Failed to set cache: ${e?.message ?? e}`);
     }
   }
 
@@ -65,8 +65,8 @@ class CacheProvider {
         await this.connect();
       }
       await this.client?.del(key);
-    } catch (e) {
-      Logger.error(`Failed to delete cache: ${e.message}`);
+    } catch (e: any) {
+      Logger.error(`Failed to delete cache: ${e?.message ?? e}`);
     }
   }
 }

@@ -100,7 +100,7 @@ async function app(req: Request): Promise<Response> {
         status: error.status,
         headers: new Headers({
           "Content-Type": "text/html",
-          "Cache-Control": cacheControlHeader,
+          "Cache-Control": "no-store, no-cache, must-revalidate",
         }),
       },
     );
@@ -146,7 +146,7 @@ async function app(req: Request): Promise<Response> {
           status: userResponseInfo.code,
           headers: new Headers({
             "Content-Type": "text/html",
-            "Cache-Control": cacheControlHeader,
+            "Cache-Control": "no-store, no-cache, must-revalidate",
           }),
         },
       );
