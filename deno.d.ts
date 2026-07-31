@@ -4,6 +4,12 @@ declare namespace Deno {
   export function exit(code?: number): never;
   export function mkdir(path: string | URL, options?: { recursive?: boolean }): Promise<void>;
   export function writeTextFile(path: string | URL, data: string): Promise<void>;
+  export function statSync(path: string | URL): { isFile: boolean; isDirectory: boolean; mtime: Date | null };
+  export function stat(path: string | URL): Promise<{ isFile: boolean; isDirectory: boolean; mtime: Date | null }>;
+  export function readFileSync(path: string | URL): Uint8Array;
+  export function readDirSync(path: string | URL): Iterable<{ name: string }>;
+  export function removeSync(path: string | URL): void;
+  export function writeFile(path: string | URL, data: Uint8Array, options?: { create?: boolean }): Promise<void>;
   export function serve(options: { port?: number }, handler: (request: Request) => Promise<Response> | Response): any;
   export function serve(handler: (request: Request) => Promise<Response> | Response, options?: { port?: number }): any;
   export const env: {
