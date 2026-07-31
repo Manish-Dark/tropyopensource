@@ -98,9 +98,10 @@ export class GithubApiService extends GithubRepository {
         return result;
       }
       return UserInfo.fromCombined(result);
-    } catch {
-      Logger.error(`Error fetching user info for username: ${username}`);
-      return new ServiceError("Not found", EServiceKindError.NOT_FOUND);
+    } catch (error: any) {
+      const msg = error?.message || `Error fetching user info for username: ${username}`;
+      Logger.error(msg);
+      return new ServiceError(msg, EServiceKindError.NOT_FOUND);
     }
   }
 
@@ -121,17 +122,18 @@ export class GithubApiService extends GithubRepository {
           tokens[attempt],
         );
       });
-    } catch (error) {
+    } catch (error: any) {
+      if (error instanceof ServiceError) {
+        Logger.error(error.message);
+        return error;
+      }
       if (error instanceof Error && error.cause instanceof ServiceError) {
         Logger.error(error.cause.message);
         return error.cause;
       }
-      if (error instanceof Error && error.cause) {
-        Logger.error(JSON.stringify(error.cause, null, 2));
-      } else {
-        Logger.error(error);
-      }
-      return new ServiceError("not found", EServiceKindError.NOT_FOUND);
+      const msg = error?.message || "An unexpected error occurred while querying GitHub API.";
+      Logger.error(msg);
+      return new ServiceError(msg, EServiceKindError.UPSTREAM);
     }
   }
 }

@@ -6,20 +6,24 @@ interface ErrorPageProps {
 }
 
 export function ErrorPage({ error }: ErrorPageProps) {
-  let cause: Error400 | Error404 | Error419 | Error502 = new Error400();
+  let cause: Error400 | Error404 | Error419 | Error502;
 
   if (error.cause === EServiceKindError.RATE_LIMIT) {
-    cause = new Error419();
-  }
-
-  if (error.cause === EServiceKindError.NOT_FOUND) {
-    cause = new Error404(
-      "Sorry, the user you are looking for was not found.",
+    cause = new Error419(
+      error.message || "GitHub API rate limit exceeded.",
     );
-  }
-
-  if (error.cause === EServiceKindError.UPSTREAM) {
-    cause = new Error502("GitHub returned an unexpected response.");
+  } else if (error.cause === EServiceKindError.NOT_FOUND) {
+    cause = new Error404(
+      error.message || "Sorry, the user you are looking for was not found.",
+    );
+  } else if (error.cause === EServiceKindError.UPSTREAM) {
+    cause = new Error502(
+      error.message || "GitHub returned an unexpected response.",
+    );
+  } else {
+    cause = new Error400(
+      error.message || "Bad Request.",
+    );
   }
 
   return cause;

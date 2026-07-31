@@ -11,12 +11,39 @@ export async function requestGithubData<T = unknown>(
   variables: { [key: string]: string },
   token = "",
 ) {
-  const response = await soxa.post("", {}, {
-    data: { query, variables },
-    headers: {
-      Authorization: `bearer ${token}`,
-    },
-  }) as QueryDefaultResponse<{ user: T }>;
+  let response;
+  try {
+    response = await soxa.post("", {}, {
+      data: { query, variables },
+      headers: {
+        Authorization: `bearer ${token}`,
+      },
+    }) as QueryDefaultResponse<{ user: T }>;
+  } catch (soxaErr: any) {
+    const resData = soxaErr?.response?.data;
+    const msg = resData?.message || soxaErr?.message || "Failed to communicate with GitHub API";
+    const status = soxaErr?.response?.status;
+
+    if (status === 401 || msg.toLowerCase().includes("bad credentials")) {
+      throw new ServiceError(
+        "Invalid or missing GitHub API token (401 Bad Credentials). Please check your GITHUB_TOKEN1 environment variable on Vercel.",
+        EServiceKindError.UPSTREAM,
+      );
+    }
+
+    if (status === 403 || msg.toLowerCase().includes("rate limit")) {
+      throw new ServiceError(
+        `GitHub API rate limit exceeded: ${msg}`,
+        EServiceKindError.RATE_LIMIT,
+      );
+    }
+
+    throw new ServiceError(
+      `GitHub API Error (${status || "Network"}): ${msg}`,
+      EServiceKindError.UPSTREAM,
+    );
+  }
+
   const responseData = response.data;
 
   if (responseData?.errors?.length) {
