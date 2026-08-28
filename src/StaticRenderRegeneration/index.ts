@@ -7,30 +7,32 @@ export async function staticRenderRegeneration(
   options: StaticRegenerationOptions,
   render: (request: Request) => Promise<Response>,
 ) {
-  // avoid TypeError: Invalid URL at deno:core
-  const url = getUrl(request);
+  try {
+    const url = getUrl(request);
 
-  // if more conditions are added, make sure to create a variable to skipCache
-  if (url.pathname === "/favicon.ico") {
+    if (url.pathname === "/favicon.ico") {
+      return await render(request);
+    }
+
+    const cacheFile = await hashString(url.pathname + (url.search ?? ""));
+    const cacheManager = new CacheManager(options.revalidate ?? 0, cacheFile);
+    if (cacheManager.isCacheValid) {
+      const cache = readCache(cacheManager.cacheFilePath);
+      if (cache !== null) {
+        return new Response(cache as unknown as BodyInit, {
+          headers: options.headers ?? new Headers({}),
+        });
+      }
+    }
+
+    const response = await render(request);
+
+    if (response.status >= 200 && response.status < 300) {
+      void cacheManager.save(response);
+    }
+
+    return response;
+  } catch {
     return await render(request);
   }
-
-  const cacheFile = await hashString(url.pathname + (url.search ?? ""));
-  const cacheManager = new CacheManager(options.revalidate ?? 0, cacheFile);
-  if (cacheManager.isCacheValid) {
-    const cache = readCache(cacheManager.cacheFilePath);
-    if (cache !== null) {
-      return new Response(cache as unknown as BodyInit, {
-        headers: options.headers ?? new Headers({}),
-      });
-    }
-  }
-
-  const response = await render(request);
-
-  if (response.status >= 200 && response.status < 300) {
-    void cacheManager.save(response);
-  }
-
-  return response;
 }

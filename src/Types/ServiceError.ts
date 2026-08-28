@@ -11,7 +11,7 @@ export class ServiceError extends Error {
   get code(): number {
     switch (this.cause) {
       case EServiceKindError.RATE_LIMIT:
-        return 419;
+        return 429;
       case EServiceKindError.NOT_FOUND:
         return 404;
       case EServiceKindError.UPSTREAM:

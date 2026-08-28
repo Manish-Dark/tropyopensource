@@ -153,10 +153,15 @@ async function app(req: Request): Promise<Response> {
   if (!hasCache) {
     const userResponseInfo = await client.requestUserInfo(username);
     if (userResponseInfo instanceof ServiceError) {
+      const statusCode =
+        (typeof userResponseInfo.code === "number" &&
+          userResponseInfo.code >= 200 && userResponseInfo.code <= 599)
+          ? userResponseInfo.code
+          : 500;
       return new Response(
         ErrorPage({ error: userResponseInfo }).render(),
         {
-          status: userResponseInfo.code,
+          status: statusCode,
           headers: new Headers({
             "Content-Type": "text/html",
             "Cache-Control": "no-store, no-cache, must-revalidate",
