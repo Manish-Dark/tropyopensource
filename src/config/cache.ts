@@ -26,11 +26,14 @@ class CacheProvider {
       return;
     }
     try {
+      const isUpstash = host.includes("upstash.io");
+      const useTls = isUpstash || Deno.env.get("REDIS_TLS") === "true";
       this.client = await connect({
         hostname: host,
         port: Number(Deno.env.get("REDIS_PORT")) || 6379,
         username: Deno.env.get("REDIS_USERNAME") || undefined,
         password: Deno.env.get("REDIS_PASSWORD") || undefined,
+        tls: useTls,
       });
     } catch (e: any) {
       Logger.error(`Redis connection failed: ${e?.message ?? e}`);
