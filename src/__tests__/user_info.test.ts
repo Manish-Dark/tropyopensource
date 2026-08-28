@@ -1,3 +1,4 @@
+/// <reference path="../../deno.d.ts" />
 import { assertEquals } from "../../deps.ts";
 import { UserInfo } from "../user_info.ts";
 

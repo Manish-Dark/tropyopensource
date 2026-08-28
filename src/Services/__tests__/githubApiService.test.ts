@@ -1,3 +1,4 @@
+/// <reference path="../../../deno.d.ts" />
 import { GithubApiService } from "../GithubApiService.ts";
 import { assertEquals, returnsNext, soxa, stub } from "../../../deps.ts";
 import { GitHubUserRepository } from "../../user_info.ts";
@@ -120,7 +121,7 @@ Deno.test("Should throw RATE LIMIT", async () => {
     error = e;
   }
 
-  assertEquals((error as ServiceError).code, 419);
+  assertEquals((error as ServiceError).code, 429);
   assertEquals(error instanceof ServiceError, true);
 });
 
@@ -134,6 +135,6 @@ Deno.test("Should throw RATE LIMIT Exceed", async () => {
     error = e;
   }
 
-  assertEquals((error as ServiceError).code, 419);
+  assertEquals((error as ServiceError).code, 429);
   assertEquals(error instanceof ServiceError, true);
 });

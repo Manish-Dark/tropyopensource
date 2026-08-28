@@ -16,6 +16,9 @@ declare namespace Deno {
     get(key: string): string | undefined;
     set(key: string, value: string): void;
   };
+  export function test(name: string, fn: (...args: any[]) => any): void;
+  export function test(options: { name: string; fn: (...args: any[]) => any }): void;
+  export function test(name: string, options: any, fn: (...args: any[]) => any): void;
 }
 
 declare module "@std/dotenv" {

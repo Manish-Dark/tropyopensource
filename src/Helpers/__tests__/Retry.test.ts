@@ -1,3 +1,4 @@
+/// <reference path="../../../deno.d.ts" />
 import { Retry } from "../Retry.ts";
 import {
   assertEquals,
