@@ -2,8 +2,14 @@ PORT=8080
 GITHUB_TOKEN1=
 GITHUB_TOKEN2=
 GITHUB_API=https://api.github.com/graphql
-ENABLE_REDIS=
+
+# Upstash Redis Configuration Example
+ENABLE_REDIS=true
+REDIS_HOST=credible-sponge-204279.upstash.io
 REDIS_PORT=6379
-REDIS_HOST=
-REDIS_USERNAME=
+REDIS_USERNAME=default
 REDIS_PASSWORD=
+
+# Docker Configuration Example
+DOCKER_USERNAME=manishvashishtha
+DOCKER_PAT=

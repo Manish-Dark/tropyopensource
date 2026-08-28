@@ -11,6 +11,8 @@ const username = Deno.args[0];
 const outputPath = Deno.args[1] ?? "./assets/trophy.svg";
 const themeName = Deno.args[2] ?? "default";
 
+import type { UserInfo } from "./src/user_info.ts";
+
 if (!username) {
   console.error(
     "Usage: deno run --allow-net --allow-env --allow-read --allow-write ./render_svg.ts USERNAME [OUTPUT_PATH] [THEME]",
@@ -18,13 +20,11 @@ if (!username) {
   Deno.exit(1);
 }
 
-import { GithubApiService } from "./src/Services/GithubApiService.ts";
-import { Card } from "./src/card.ts";
-import { COLORS } from "./src/theme.ts";
-import { ServiceError } from "./src/Types/index.ts";
-import { UserInfo } from "./src/user_info.ts";
-
 async function main() {
+  const { GithubApiService } = await import("./src/Services/GithubApiService.ts");
+  const { Card } = await import("./src/card.ts");
+  const { COLORS } = await import("./src/theme.ts");
+  const { ServiceError } = await import("./src/Types/index.ts");
   console.log("Starting trophy render...");
   console.log("Username:", username);
   console.log("Output path:", outputPath);

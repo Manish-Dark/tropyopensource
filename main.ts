@@ -7,7 +7,7 @@ try {
   // Ignore missing .env file
 }
 
-import requestHandler from "./api/index.ts";
+const { default: requestHandler } = await import("./api/index.ts");
 
 Deno.serve({ port: Number(Deno.env.get("PORT")) || 8080 }, requestHandler);
 

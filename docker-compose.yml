@@ -1,16 +1,26 @@
-version: "3"
+version: "3.8"
 services:
   redis:
     container_name: trophy-redis
-    image: redis:latest
+    image: redis:alpine
+    command: redis-server --requirepass ${REDIS_PASSWORD:-trophyredispass123}
     ports:
       - "6379:6379"
+    restart: always
+
   deno-app:
     build: .
-    volumes:
-      - .:/app
+    image: manishvashishtha/github-profile-trophy:latest
+    container_name: trophy-app
     ports:
-      - "80:8080"
+      - "8080:8080"
     environment:
-      - DENO_ENV=development
+      - PORT=8080
+      - ENABLE_REDIS=true
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=${REDIS_PASSWORD:-trophyredispass123}
+      - GITHUB_TOKEN1=${GITHUB_TOKEN1}
+    depends_on:
+      - redis
     command: ["deno", "run", "--watch", "-A", "main.ts"]
