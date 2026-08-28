@@ -1,5 +1,7 @@
 /// <reference path="../../../deno.d.ts" />
-import { assertEquals, assertRejects, soxa, stub } from "../../../dev_deps.ts";
+import { assertEquals, assertRejects } from "jsr:@std/assert@^1.0.0";
+import { stub } from "jsr:@std/testing@^1.0.0/mock";
+import { soxa } from "../../../deps.ts";
 import { EServiceKindError, ServiceError } from "../../Types/index.ts";
 import { requestGithubData } from "../request.ts";
 

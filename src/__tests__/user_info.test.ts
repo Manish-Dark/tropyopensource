@@ -1,5 +1,5 @@
 /// <reference path="../../deno.d.ts" />
-import { assertEquals } from "../../dev_deps.ts";
+import { assertEquals } from "jsr:@std/assert@^1.0.0";
 import { UserInfo } from "../user_info.ts";
 
 Deno.test("UserInfo calculates total stargazers", () => {

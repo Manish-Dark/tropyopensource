@@ -1,11 +1,7 @@
 /// <reference path="../../../deno.d.ts" />
 import { Retry } from "../Retry.ts";
-import {
-  assertEquals,
-  assertRejects,
-  assertSpyCalls,
-  spy,
-} from "../../../dev_deps.ts";
+import { assertEquals, assertRejects } from "jsr:@std/assert@^1.0.0";
+import { assertSpyCalls, spy } from "jsr:@std/testing@^1.0.0/mock";
 
 type MockResponse = {
   value: number;

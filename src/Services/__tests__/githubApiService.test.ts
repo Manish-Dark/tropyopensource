@@ -1,6 +1,8 @@
 /// <reference path="../../../deno.d.ts" />
 import { GithubApiService } from "../GithubApiService.ts";
-import { assertEquals, returnsNext, soxa, stub } from "../../../dev_deps.ts";
+import { assertEquals } from "jsr:@std/assert@^1.0.0";
+import { returnsNext, stub } from "jsr:@std/testing@^1.0.0/mock";
+import { soxa } from "../../../deps.ts";
 import { GitHubUserRepository } from "../../user_info.ts";
 
 const rateLimitMock = await import("../__mocks__/rateLimitMock.json", {
