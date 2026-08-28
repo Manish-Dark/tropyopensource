@@ -5,11 +5,11 @@
 </div>
 <div align="center">
 
-[![stargazers](https://img.shields.io/github/stars/Manish-Dark/github-profile-trophy)](https://github.com/Manish-Dark/github-profile-trophy/stargazers)
-[![forks](https://img.shields.io/github/forks/Manish-Dark/github-profile-trophy)](https://github.com/Manish-Dark/github-profile-trophy/network/members)
-[![issues](https://img.shields.io/github/issues/Manish-Dark/github-profile-trophy)](https://github.com/Manish-Dark/github-profile-trophy/issues)
-[![license](https://img.shields.io/github/license/Manish-Dark/github-profile-trophy)](https://github.com/Manish-Dark/github-profile-trophy/blob/master/LICENSE)
-[![share](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FManish-Dark%2Fgithub-profile-trophy)](https://twitter.com/intent/tweet?text=Add%20dynamically%20generated%20GitHub%20Trophy%20on%20your%20readme%0D%0A&url=https%3A%2F%2Fgithub.com%2FManish-Dark%2Fgithub-profile-trophy)
+[![stargazers](https://img.shields.io/github/stars/Manish-Dark/tropyopensource)](https://github.com/Manish-Dark/tropyopensource/stargazers)
+[![forks](https://img.shields.io/github/forks/Manish-Dark/tropyopensource)](https://github.com/Manish-Dark/tropyopensource/network/members)
+[![issues](https://img.shields.io/github/issues/Manish-Dark/tropyopensource)](https://github.com/Manish-Dark/tropyopensource/issues)
+[![license](https://img.shields.io/github/license/Manish-Dark/tropyopensource)](https://github.com/Manish-Dark/tropyopensource/blob/main/LICENSE)
+[![share](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FManish-Dark%2Ftropyopensource)](https://twitter.com/intent/tweet?text=Add%20dynamically%20generated%20GitHub%20Trophy%20on%20your%20readme%0D%0A&url=https%3A%2F%2Fgithub.com%2FManish-Dark%2Ftropyopensource)
 
 </div>
 <p align="center">
@@ -84,7 +84,7 @@ Add the following code to your readme. When pasting the code into your profile's
 readme, change the `?username=` value to your GitHub's username.
 
 ```
-[![trophy](https://github-profile-trophy.vercel.app/?username=Manish-Dark)](https://github.com/Manish-Dark/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=Manish-Dark)](https://github.com/Manish-Dark/tropyopensource)
 ```
 
 <p align="center">
@@ -96,7 +96,7 @@ readme, change the `?username=` value to your GitHub's username.
 Add optional parameter of the theme.
 
 ```
-[![trophy](https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=onedark)](https://github.com/Manish-Dark/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=onedark)](https://github.com/Manish-Dark/tropyopensource)
 ```
 
 <p align="center">
@@ -659,5 +659,5 @@ Check [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
 # License
 
 This product is licensed under the
-[MIT License](https://github.com/Manish-Dark/github-profile-trophy/blob/master/LICENSE).
+[MIT License](https://github.com/Manish-Dark/tropyopensource/blob/main/LICENSE).
 
