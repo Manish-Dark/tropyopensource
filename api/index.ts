@@ -1,3 +1,4 @@
+#!/usr/bin/env -S deno run -A
 /// <reference path="../deno.d.ts" />
 import { Card } from "../src/card.ts";
 import { CONSTANTS, parseParams } from "../src/utils.ts";
