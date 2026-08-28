@@ -5,7 +5,7 @@ import {
   assertRejects,
   assertSpyCalls,
   spy,
-} from "../../../deps.ts";
+} from "../../../dev_deps.ts";
 
 type MockResponse = {
   value: number;
