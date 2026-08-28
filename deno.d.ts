@@ -34,12 +34,23 @@ declare module "@std/http/server" {
 declare module "soxa/src/core/Soxa.ts" {
   export const Soxa: any;
 }
+declare module "https://deno.land/x/soxa@1.4/src/core/Soxa.ts" {
+  export const Soxa: any;
+}
 
 declare module "soxa/src/defaults.ts" {
   export const defaults: any;
 }
+declare module "https://deno.land/x/soxa@1.4/src/defaults.ts" {
+  export const defaults: any;
+}
 
 declare module "redis" {
+  export type Bulk = any;
+  export type Redis = any;
+  export function connect(options: any): Promise<any>;
+}
+declare module "https://deno.land/x/redis@v0.31.0/mod.ts" {
   export type Bulk = any;
   export type Redis = any;
   export function connect(options: any): Promise<any>;
@@ -49,8 +60,18 @@ declare module "@std/assert" {
   export function assertEquals(actual: any, expected: any, msg?: string): void;
   export function assertRejects(fn: () => Promise<any>, ErrorClass?: any, msg?: string): Promise<any>;
 }
+declare module "jsr:@std/assert@^1.0.0" {
+  export function assertEquals(actual: any, expected: any, msg?: string): void;
+  export function assertRejects(fn: () => Promise<any>, ErrorClass?: any, msg?: string): Promise<any>;
+}
 
 declare module "@std/testing/mock" {
+  export function assertSpyCalls(spy: any, expectedCalls: number): void;
+  export function returnsNext(values: any[]): any;
+  export function spy(...args: any[]): any;
+  export function stub(...args: any[]): any;
+}
+declare module "jsr:@std/testing@^1.0.0/mock" {
   export function assertSpyCalls(spy: any, expectedCalls: number): void;
   export function returnsNext(values: any[]): any;
   export function spy(...args: any[]): any;
