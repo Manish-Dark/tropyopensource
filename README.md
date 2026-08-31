@@ -48,11 +48,11 @@ Add the following code to your readme. When pasting the code into your profile's
 readme, change the `?username=` value to your GitHub's username.
 
 ```
-[![trophy](https://github-profile-trophy.vercel.app/?username=Manish-Dark)](https://github.com/Manish-Dark/tropyopensource)
+[![trophy](https://tropyopensource.vercel.app/?username=Manish-Dark)](https://github.com/Manish-Dark/tropyopensource)
 ```
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Manish-Dark&column=8&rank=SSS,SS,S,AAA,AA,A,B,C" />
+  <img src="https://tropyopensource.vercel.app/?username=Manish-Dark&column=8&rank=SSS,SS,S,AAA,AA,A,B,C" />
 </p>
 
 ## Use theme
@@ -60,7 +60,7 @@ readme, change the `?username=` value to your GitHub's username.
 Add optional parameter of the theme.
 
 ```
-[![trophy](https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=onedark)](https://github.com/Manish-Dark/tropyopensource)
+[![trophy](https://tropyopensource.vercel.app/?username=Manish-Dark&theme=onedark)](https://github.com/Manish-Dark/tropyopensource)
 ```
 
 <p align="center">
@@ -123,7 +123,7 @@ conditions, I will consider adding a trophy. I am waiting for contributions.
 You can filter the display by specifying the titles of trophy.
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&title=Followers
+https://tropyopensource.vercel.app/?username=Manish-Dark&title=Followers
 ```
 
 <p align="center">
@@ -133,7 +133,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&title=Followers
 If you want to specify multiple titles.
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&title=Stars,Followers
+https://tropyopensource.vercel.app/?username=Manish-Dark&title=Stars,Followers
 ```
 
 <p align="center">
@@ -143,7 +143,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&title=Stars,Follo
 You can also exclude the trophies you don't want to display.
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&title=-Stars,-Followers
+https://tropyopensource.vercel.app/?username=Manish-Dark&title=-Stars,-Followers
 ```
 
 ## Filter by ranks
@@ -152,7 +152,7 @@ You can filter the display by specifying the ranks.\
 `Available values: SECRET SSS SS S AAA AA A B C`
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&rank=S
+https://tropyopensource.vercel.app/?username=Manish-Dark&rank=S
 ```
 
 <p align="center">
@@ -162,7 +162,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&rank=S
 If you want to specify multiple ranks.
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&rank=S,AAA
+https://tropyopensource.vercel.app/?username=Manish-Dark&rank=S,AAA
 ```
 
 <p align="center">
@@ -172,7 +172,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&rank=S,AAA
 You can also exclude ranks.
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&rank=-C,-B
+https://tropyopensource.vercel.app/?username=Manish-Dark&rank=-C,-B
 ```
 
 **NOTE: Since `UNKNOWN` is denoted by `?`, in order to include or exclude it you
@@ -189,19 +189,19 @@ Trophy will be hidden if it exceeds the range of both row and column.
 Restrict only row
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&row=2
+https://tropyopensource.vercel.app/?username=Manish-Dark&row=2
 ```
 
 Restrict only column
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&column=2
+https://tropyopensource.vercel.app/?username=Manish-Dark&column=2
 ```
 
 Restrict row & column
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&row=2&column=3
+https://tropyopensource.vercel.app/?username=Manish-Dark&row=2&column=3
 ```
 
 <p align="center">
@@ -211,7 +211,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&row=2&column=3
 Adaptive column
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&column=-1
+https://tropyopensource.vercel.app/?username=Manish-Dark&column=-1
 ```
 
 You can set `column` to `-1` to adapt the width to the number of trophies, the
@@ -251,7 +251,7 @@ Available themes.
 ### flat
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=flat
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=flat
 ```
 
 <p align="center">
@@ -261,7 +261,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=flat
 ### onedark
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=onedark
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=onedark
 ```
 
 <p align="center">
@@ -271,7 +271,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=onedark
 ### gruvbox
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=gruvbox
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=gruvbox
 ```
 
 <p align="center">
@@ -281,7 +281,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=gruvbox
 ### dracula
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=dracula
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=dracula
 ```
 
 <p align="center">
@@ -291,7 +291,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=dracula
 ### monokai
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=monokai
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=monokai
 ```
 
 <p align="center">
@@ -301,7 +301,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=monokai
 ### chalk
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=chalk
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=chalk
 ```
 
 <p align="center">
@@ -311,7 +311,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=chalk
 ### nord
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=nord
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=nord
 ```
 
 <p align="center">
@@ -321,7 +321,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=nord
 ### alduin
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=alduin
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=alduin
 ```
 
 <p align="center">
@@ -331,7 +331,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=alduin
 ### darkhub
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=darkhub
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=darkhub
 ```
 
 <p align="center">
@@ -341,7 +341,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=darkhub
 ### juicyfresh
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=juicyfresh
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=juicyfresh
 ```
 
 <p align="center">
@@ -351,7 +351,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=juicyfresh
 ### buddhism
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=buddhism
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=buddhism
 ```
 
 <p align="center">
@@ -361,7 +361,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=buddhism
 ### oldie
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=oldie
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=oldie
 ```
 
 <p align="center">
@@ -371,7 +371,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=oldie
 ### radical
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=radical
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=radical
 ```
 
 <p align="center">
@@ -381,7 +381,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=radical
 ### onestar
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=onestar
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=onestar
 ```
 
 <p align="center">
@@ -391,7 +391,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=onestar
 ### discord
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=discord
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=discord
 ```
 
 <p align="center">
@@ -401,7 +401,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=discord
 ### algolia
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=algolia
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=algolia
 ```
 
 <p align="center">
@@ -411,7 +411,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=algolia
 ### gitdimmed
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=gitdimmed
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=gitdimmed
 ```
 
 <p align="center">
@@ -421,7 +421,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=gitdimmed
 ### tokyonight
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=tokyonight
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=tokyonight
 ```
 
 <p align="center">
@@ -431,7 +431,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=tokyonight
 ### matrix
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=matrix
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=matrix
 ```
 
 <p align="center">
@@ -441,7 +441,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=matrix
 ### apprentice
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=apprentice
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=apprentice
 ```
 
 <p align="center">
@@ -451,7 +451,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=apprentice
 ### dark_dimmed
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=dark_dimmed
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=dark_dimmed
 ```
 
 <p align="center">
@@ -461,7 +461,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=dark_dimmed
 ### dark_lover
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=dark_lover
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=dark_lover
 ```
 
 <p align="center">
@@ -471,7 +471,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=dark_lover
 ### kimbie_dark
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=kimbie_dark
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=kimbie_dark
 ```
 
 <p align="center">
@@ -481,7 +481,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=kimbie_dark
 ### aura
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&theme=aura
+https://tropyopensource.vercel.app/?username=Manish-Dark&theme=aura
 ```
 
 <p align="center">
@@ -495,7 +495,7 @@ You can put a margin in the width between trophies.\
 `Default: margin-w=0`
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&margin-w=15
+https://tropyopensource.vercel.app/?username=Manish-Dark&margin-w=15
 ```
 
 <p align="center">
@@ -509,7 +509,7 @@ You can put a margin in the height between trophies.\
 `Default: margin-h=0`
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&margin-h=15
+https://tropyopensource.vercel.app/?username=Manish-Dark&margin-h=15
 ```
 
 <p align="center">
@@ -519,7 +519,7 @@ https://github-profile-trophy.vercel.app/?username=Manish-Dark&margin-h=15
 ## Example layout
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&column=3&margin-w=15&margin-h=15
+https://tropyopensource.vercel.app/?username=Manish-Dark&column=3&margin-w=15&margin-h=15
 ```
 
 <p align="center">
@@ -533,7 +533,7 @@ You can turn the background transparent.\
 `Default: no-bg=false`
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&no-bg=true
+https://tropyopensource.vercel.app/?username=Manish-Dark&no-bg=true
 ```
 
 <p align="center">
@@ -547,7 +547,7 @@ You can hide the frames around the trophies.\
 `Default: no-frame=false`
 
 ```
-https://github-profile-trophy.vercel.app/?username=Manish-Dark&no-frame=true
+https://tropyopensource.vercel.app/?username=Manish-Dark&no-frame=true
 ```
 
 <p align="center">
